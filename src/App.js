@@ -9,6 +9,8 @@ import Default from "./components/Default";
 const ProductList = lazy(() => import("./components/ProductList"));
 const Details = lazy(() => import("./components/Details"));
 const Cart = lazy(() => import("./components/Cart"));
+const Login = lazy(() => import('./components/Login'))
+const Register = lazy(() => import('./components/Register'))
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/" element={<ProductList />} />
             <Route path="/details" element={<Details />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<Default />} />
           </Routes>
         </Suspense>
